@@ -14,6 +14,10 @@ fn main() {
           let mut command = String::new();
           io::stdin().read_line(&mut command).unwrap();
 
+          if command.trim() == "exit" {
+               break;
+          }
+
           println!("{}", shell::handle_command(&command.as_str()));
      }
      // Wait for user input
