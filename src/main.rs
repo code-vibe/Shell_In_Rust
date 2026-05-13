@@ -23,9 +23,9 @@ fn main() {
           } else if command.starts_with("type ") {
                let output =  &command[5..];
                match output {
-                    "echo" => println!("{}: is a shell builtin", output.to_string()),
-                    "exit" => println!("{}: is a shell builtin", output.to_string()),
-                    "type" => println!("{}: is a shell builtin", output.to_string()),
+                    "echo" => println!("{} is a shell builtin", output.to_string()),
+                    "exit" => println!("{} is a shell builtin", output.to_string()),
+                    "type" => println!("{} is a shell builtin", output.to_string()),
                     _ => println!("{}: not found", output.to_string())
                }
           }else {
