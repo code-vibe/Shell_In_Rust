@@ -3,24 +3,19 @@ use std::io::{self, Write};
 
 mod shell;
 fn main() {
-
-    // TODO: Uncomment the code below to pass the first stage
-
-
      loop {
           print!("$ ");
           io::stdout().flush().unwrap();
-
+          // Wait for user input
           let mut command = String::new();
           io::stdin().read_line(&mut command).unwrap();
-
-          if command.trim() == "exit" {
+          command = command.trim().to_string();
+          if command == "exit" {
                break;
+          } else if command.starts_with("echo ") {
+               println!("{}", &command[5..]);
+          } else {
+               println!("{}: command not found", command);
           }
-
-          println!("{}", shell::handle_command(&command.as_str()));
      }
-     // Wait for user input
-
-
-}
+}`
