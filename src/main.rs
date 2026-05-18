@@ -41,10 +41,7 @@ fn eval_command(command: &str, args: Vec<&str>)  {
      }
 
      if command == "echo" {
-          for arg in args {
-               println!("{}", arg);
-          }
-          println!();
+         println!("{}", args.join(" "));
           return;
      }
 
