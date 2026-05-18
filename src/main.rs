@@ -18,9 +18,9 @@ fn main() {
           let mut input = "".to_string();
           io::stdin().read_line(&mut input).unwrap(); //"type grep"
 
-          //input.pop();
+         let input =  input.trim();
 
-          let command: Vec<&str> = input.split(" ").collect();
+          let command: Vec<&str> = input.split(' ').collect();
 
           if command[0] == "exit" {
                break;
