@@ -10,6 +10,7 @@ pathsearch = "0.2.0"
 anyhow = "1.0.68"                                # error handling
 bytes = "1.3.0"                                  # helps manage buffers
 thiserror = "1.0.38"
-strum = { version = "0.27.2", features = ["derive"] }                             # error handling
+strum = { version = "0.27.2", features = ["derive"] }
+shell-words = "1.1.1"                             # error handling
 [profile.dev]
 opt-level = 0
